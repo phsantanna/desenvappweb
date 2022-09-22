@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.icon_chall{
+    width: 300px;
+    margin-bottom: -140px;
+    margin-left: 100px;
+}
+#emote_ziggs{
+    width: 200px;
+    margin-bottom: -190px;
+    margin-left: 100px;
+}
+.infos{/*Div infos*/
+        background-image: url(../imagens/bg_contas.webp);
+        width: 500px;
+        height: 600px;
+        border-radius: 20px;
+        margin-left: 400px;
+
+}
+.desc_contas{/*estilização da informação da conta*/
+        font-family: Poppins-Bold;
+        color: #ffffff;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+        padding-top: 150px ;
+}
+.info_contas{/*estilização das lis*/
+    font-family: Poppins-Bold;
+    color: #e0e4e7;
+    font-size: 19px;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+    padding-bottom: 30px;
+    list-style: none;
+}
+.preco_contas{/*Valor da conta*/
+    font-family: Poppins-Bold;
+    text-align: center;
+    color: #e0e4e7;
+    font-size: 36px;
+}
+.preco_contas:hover{
+    transition: 0.5s;
+    background-color: #af4040;
+    opacity: 1;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/* margem e tamanho do botão comprar */
+.infos-login-form-button{
+    margin-top: 40px;
+    width: 50%;
+}
+#login-form-button{/*Botão comprar*/
+    font-family: Poppins-Bold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;/*Deixa "comprar" em maiúsculo*/
+    display: flex;/* Todos elemenos terão mesma altura */
+    justify-content: center;/*alinha conteudo ao centro*/
+    align-items: center; /*alinha a palavra "comprar" com o container button*/
+    margin-left: 125px;
+    width: 100%;
+    height: 50px;
+    background-color: #af4040;
+    border-radius: 5px;/*arredonda borda do botão*/
+    transition: all 0.4s; /*tempo de transição da troca de cores do botão comprar*/
+    
+}
+#login-form-button:hover{ /*efeito hover no botao comprar*/
+    background-color: #333333;
+}

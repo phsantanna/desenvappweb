@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../DESENV. APLIC WEB/css/login.css" />
+    <link rel="stylesheet" href="../DESENV. APLIC WEB/css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefSmurfs</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="imagens/logo.jpg" alt="logo_site" height="40px" /></a>
+            <ul class="nav-list">
+                <!-- menu do site -->
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="login.html">ENTRAR</a></li>
+                <li><a href="#">REGISTRAR</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="https://www.leagueoflegends.com/pt-br/news/riot-games/">RIOT GAMES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- container-login contém o estilo da pagina de login -->
+        <div class="container-login">
+            <!-- site-login terá o estilo relacionado ao formulario de login -->
+            <div class="site-login">
+                <form class="login-form">
+                    <span class="login-form-title">ENTRAR</span>
+                    <!-- site-input relacionado a formatacao do campo de login -->
+                    <div class="site-input margin-top-35 margin-bottom-35">
+                        <input class="input-form" type="email" name="email" autocomplete="off"/>
+                        <!-- coloca a palavra "email" dentro do campo email -->
+                        <span class="focus-input-form" data-placeholder="E-mail"></span>
+                    </div>
+                    <!-- site-input relacionado a formatacao do campo de login -->
+                    <div class="site-input">
+                        <input class="input-form" type="password" name="password"/>
+                        <!-- coloca a palavra "senha" dentro do campo senha -->
+                        <span class="focus-input-form" data-placeholder="Senha"></span>
+                    </div>
+                    <!-- formatação do botão login -->
+                    <div class="container-login-form-button">
+                        <button class="login-form-button">Login</button>
+                        <!-- esqueceu senha e criar conta -->
+                        <ul class="login-utils">
+                            <!-- margem do login_utils (criar senha e esqueceu senha) -->
+                            <li class="margin-top-8 margin-bottom-8">
+                                <span class="text1">Esqueceu sua</span>
+                                <a href="#"class="text2">Senha?</a>
+                            </li>
+                            <li>
+                                <!-- Redireciona para pagina de cadastro -->
+                                <ul class="login-utils">
+                                    <li class="margin-top-8 margin-bottom-8">
+                                        <span class="text1">Não tem conta?</span>
+                                        <a href="#"class="text2">Criar</a>
+                                    </li>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

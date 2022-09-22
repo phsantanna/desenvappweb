@@ -1,0 +1,232 @@
+body, html{ /*tratando body e html*/
+    overflow: hidden; /* ocultar scroll do site*/
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+ul, li{ /*formatacao das listas*/
+    margin: 0;
+    list-style-type: none; /* Remove marcadores da lista ex: °1 °2 °3 */
+}
+input, button{
+    outline: none !important;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+}
+/* Criei variaveis para definir a cor dos botões e links */
+:root{
+    --main-color: #af4040;
+    --link-color: #666666;
+    --text1: #af4040;
+    --highlight-text: #ffffff;
+    --input-text: #333333;
+    --white-text: #FFFFFF;
+    --points-list: #CCCCCC;
+    --line-input: #D9D9D9;
+
+}
+/* Fontes da pagina */
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+/* utilitarios */
+.text1{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    /* chamada da variavel --text1 que criei */
+    color: var(--text1);
+    line-height: 1.5;
+
+}
+.text2{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    /* chamada da variavel --text2 que criei */
+    color: var(--main-color);
+    line-height: 1.5;
+}
+.margin-bottom-35{
+    margin-bottom: 35px;
+}
+.margin-top-35{
+    margin-top: 35px;
+}
+.margin-bottom-8{
+    margin-bottom: 8px;
+}
+.margin-top-8{
+    margin-top: 8px;
+}
+.margin-left-50{
+    margin-left: 50px;
+}
+/* Login */
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+/* formatacao do login */
+.container-login{
+    display: flex;
+    /* caso o conteudo de alguma div ultrapasse o limite da tela, ele cai pra baixo */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background: url(../imagens/bg_atual.jpg) no-repeat center center;
+    background-size: cover;
+    height: 68.1vh;
+    margin-bottom: -599px;
+}
+.site-login{
+    width: 370px;
+    margin-right: 50px;
+}
+/* estilo do formulário */
+.login-form{
+    width: 100%;
+}
+.login-form-title{
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 95px;
+    color: #af4040;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* estilo do input */
+.site-input{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid var(--line-input);
+}
+.input-form{
+    font-family: Poppins-SemiBold;
+    font-size: 18px;
+    color: var(--input-text);
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 52px;
+    background: transparent;
+    padding: 0 5px;
+}
+.focus-input-form{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+/* efeito de linha em baixo dos campos de login e senha quando campo for selecionado*/
+.focus-input-form::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background-color: var(--main-color);
+}
+.focus-input-form::after{ /*tratamento do conteudo dos inputs quando ele focar focado*/
+    font-family: Poppins-Midium;
+    font-size: 18px;
+    color: var(--text1);
+    line-height: 1.2;
+    content: attr(data-placeholder);/*pega o conteudo email e senha*/
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 5px;
+    transition: all 0.4s;
+}
+/* Faz com que os campos email e senha tenham efeito, eles vão pra cima ai clicar neles */
+.input-form:focus + .focus-input-form::after{/**/
+    top: -20px;
+    font-size: 15px;
+}
+/* aplica o focus-input-form::before durante os 4 segundos, passa uma linha em baixo dos campos */
+.input-form:focus + .focus-input-form::before{
+    width: 100%;
+}
+.has-val.input-form + .focus-input-form::after{ /*has-val evita com que o efeito email e senha desçam caso tenha algo digitado no input*/
+    top: -20px;
+    font-size: 15px;
+}
+
+.has-val.input-form + .focus-input-form::before{
+    width: 100%;
+}
+
+/* margem e tamanho do botão login */
+.container-login-form-button{
+    margin-top: 40px;
+    width: 100%;
+}
+.login-form-button{/*Botão login*/
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: var(--white-text);
+    line-height: 1.2;
+    text-transform: uppercase;/*Deixa "login" em maiúsculo*/
+    display: flex;/* Todos elemenos terão mesma altura */
+    justify-content: center;/*alinha conteudo ao centro*/
+    align-items: center; /*alinha a palavra "login" com o container button*/
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 5px;/*arredonda borda do botão*/
+    transition: all 0.4s; /*tempo de transição da troca de cores do botão login*/
+}
+/*Trocar cor do background color do botão quando passar o mouse por cima */
+.login-form-button:hover{
+    background-color: #333333;
+}
+
+/* Login - Login Utils - Efeito nos links "Senha" e "Criar" */
+.a{
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--link-color);
+    margin: 0;
+    transition: all 0.4s;
+}
+a:focus{
+    outline: none !important; /*remove contorno Criar e Senha*/
+
+}
+a:hover{ /* Efeitos nos botões da nav quando passar o mouse */
+    color: var(--highlight-text);
+    text-decoration: none; /*retira o sublinhado dos links*/
+}
+

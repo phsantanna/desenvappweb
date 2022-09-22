@@ -1,0 +1,46 @@
+body{ /* ocultar scroll da pagina */
+   overflow: hidden;
+}
+
+*{ /* resetando as configs padrões dos navegadores */
+
+    margin: 0;
+    padding: 0;
+}
+
+a{ /* formatação dos botões da nav */
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover{/* Efeitos nos botões da nav quando passar o mouse */
+    opacity: 0.7;/*Opacidade do efeito hover*/
+}
+
+nav{ /* alterando fonte, background e afins dentro da nav */
+    display: flex;/* Todos elemenos da nav terão mesma altura */
+    justify-content: space-around;/* Items distribuidos igualmente na nav, margens iguais a direita e esquerda */
+    align-items: center; /*Items alinhados ao centro */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+main{ /*Adicionei um background image na tag main*/
+    background: url(../imagens/bg_atual.jpg) center center;
+    background-repeat: no-repeat;/*Evitar com que o background se duplique*/
+    background-size: cover;/*faz com que a imagem ocupe o espaço inteiro onde foi aplicada*/
+}
+.nav-list{ /*todos elementos da lista*/
+    list-style: none;/* Remove marcadores da lista ex: °1 °2 °3 */
+    display: flex;/* Todos elementos da lista terão mesma altura */
+}
+
+.nav-list li{ /*formatação dos elementos dentro da li*/
+    letter-spacing: 3px;/*espaçamento entre letras*/
+    margin-left: 32px;
+}
+.video{
+    margin: 100px 100px;
+    margin-left: 360px;
+}
