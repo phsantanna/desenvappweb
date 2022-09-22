@@ -30,6 +30,7 @@ main{ /*Adicionei um background image na tag main*/
     background: url(../imagens/bg_atual.jpg) center center;
     background-repeat: no-repeat;/*Evitar com que o background se duplique*/
     background-size: cover;/*faz com que a imagem ocupe o espaço inteiro onde foi aplicada*/
+   height: 100vh;
 }
 .nav-list{ /*todos elementos da lista*/
     list-style: none;/* Remove marcadores da lista ex: °1 °2 °3 */
